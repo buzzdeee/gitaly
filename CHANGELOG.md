@@ -3,6 +3,10 @@
 
 UNRELEASED
 
+- ListBranchNamesContainingCommit server implementation
+  https://gitlab.com/gitlab-org/gitaly/merge_requests/537
+- ListTagNamesContainingCommit server implementation
+  https://gitlab.com/gitlab-org/gitaly/merge_requests/537
 - Handle non-existent commits in ExtractCommitSignature
   https://gitlab.com/gitlab-org/gitaly/merge_requests/535
 - Implement RepositoryService::WriteRef
