@@ -34,8 +34,10 @@ module GitalyServer
 
           wiki = Gitlab::Git::Wiki.new(repo)
           commit_details = commit_details_from_gitaly(commit_details)
+          filename = File.basename(name)
+          dir = File.dirname(name)
 
-          wiki.write_page(name, format.to_sym, content, commit_details)
+          wiki.write_page(filename, format.to_sym, content, commit_details, dir)
 
           Gitaly::WikiWritePageResponse.new
         rescue Gitlab::Git::Wiki::DuplicatePageError => e
