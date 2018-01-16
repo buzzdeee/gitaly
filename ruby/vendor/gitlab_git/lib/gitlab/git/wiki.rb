@@ -178,7 +178,10 @@ module Gitlab
         assert_type!(format, Symbol)
         assert_type!(commit_details, CommitDetails)
 
-        gollum_wiki.write_page(name, format, content, commit_details.to_h)
+        filename = File.basename(name)
+        dir = (tmp_dir = File.dirname(name)) == '.' ? '' : tmp_dir
+
+        gollum_wiki.write_page(filename, format, content, commit_details.to_h, dir)
 
         nil
       rescue Gollum::DuplicatePageError => e
