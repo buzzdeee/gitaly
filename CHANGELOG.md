@@ -1,5 +1,10 @@
 # Gitaly changelog
 
+UNRELEASED
+
+- Implement RepositoryService.WriteConfig RPC
+  https://gitlab.com/gitlab-org/gitaly/merge_requests/554
+
 v0.72.0
 
 - Implement RemoteService.UpdateRemoteMirror RPC

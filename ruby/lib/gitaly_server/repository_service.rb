@@ -92,5 +92,19 @@ module GitalyServer
         Gitaly::WriteRefResponse.new
       end
     end
+
+    def write_config(request, call)
+      bridge_exceptions do
+        begin
+          repo = Gitlab::Git::Repository.from_gitaly(request.repository, call)
+
+          repo.write_config(request.full_path)
+
+          Gitaly::WriteConfigResponse.new
+        rescue Exception => ex
+          Gitaly::WriteConfigResponse.new(error: ex.message.b)
+        end
+      end
+    end
   end
 end
