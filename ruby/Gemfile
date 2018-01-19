@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'github-linguist', '~> 4.7.0', require: 'linguist'
-gem 'gitaly-proto', '~> 0.75.0', require: 'gitaly'
+gem 'gitaly-proto', '~> 0.76.0', require: 'gitaly', git: 'https://gitlab.com/gitlab-org/gitaly-proto.git', ref: '7690460b0e7e856554c503b3fad0f9fe3e5bb009'
 gem 'activesupport'
 gem 'rdoc', '~> 4.2'
 gem 'gollum-lib', '~> 4.2', require: false

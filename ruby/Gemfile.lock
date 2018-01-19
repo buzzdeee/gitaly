@@ -1,3 +1,12 @@
+GIT
+  remote: https://gitlab.com/gitlab-org/gitaly-proto.git
+  revision: 7690460b0e7e856554c503b3fad0f9fe3e5bb009
+  ref: 7690460b0e7e856554c503b3fad0f9fe3e5bb009
+  specs:
+    gitaly-proto (0.76.0)
+      google-protobuf (~> 3.1)
+      grpc (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -17,9 +26,6 @@ GEM
       multipart-post (>= 1.2, < 3)
     gemojione (3.3.0)
       json
-    gitaly-proto (0.75.0)
-      google-protobuf (~> 3.1)
-      grpc (~> 1.0)
     github-linguist (4.7.6)
       charlock_holmes (~> 0.7.3)
       escape_utils (~> 1.1.0)
@@ -136,7 +142,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  gitaly-proto (~> 0.75.0)
+  gitaly-proto (~> 0.76.0)!
   github-linguist (~> 4.7.0)
   gitlab-styles (~> 2.0.0)
   gollum-lib (~> 4.2)
