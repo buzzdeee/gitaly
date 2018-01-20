@@ -20,8 +20,11 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
-// Stamp taken from https://golang.org/pkg/time/#pkg-constants
-const testTimeString = "200601021504.05"
+const (
+	// Stamp taken from https://golang.org/pkg/time/#pkg-constants
+	testTimeString     = "200601021504.05"
+	defaultStorageName = "default"
+)
 
 var (
 	testTime   = time.Date(2006, 1, 2, 15, 4, 5, 0, time.UTC)

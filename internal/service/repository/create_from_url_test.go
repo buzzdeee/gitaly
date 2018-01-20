@@ -15,8 +15,6 @@ import (
 	"google.golang.org/grpc/codes"
 )
 
-const defaultStorageName = "default"
-
 func TestSuccessfulCreateRepositoryFromURLRequest(t *testing.T) {
 	server, serverSocketPath := runRepoServer(t)
 	defer server.Stop()
